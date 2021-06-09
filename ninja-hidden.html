@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ninja-hidden</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" rel="stylesheet" >
+        
+        <link rel="stylesheet" href="styles.css">
+
+        <!--JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $('img').click(function(){
+                    var ruta_actual = $(this).attr('src');
+                    var ruta_alternativa = $(this).attr('data-alt-src');
+                    $(this).attr('src', ruta_alternativa);
+                    $(this).attr('data-alt-src', ruta_actual);
+                    
+                //$(this).hide()
+                    $(this).fadeOut("slow");
+                });
+                $('#recuperar-fotos').click(function(){
+                    //$('img').show('slow')
+                    $('img').fadeIn("slow");
+                })
+            })
+        </script>
+    
+    </head>
+    <body>
+        <div class="container">
+
+            <div class=row>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/cherry.jpg" data-alt-src="images/stormtroopocat.png" alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/jean-luc-picat.jpg" data-alt-src="images/daftpunk.gif" alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/defunktocat.png"data-alt-src="images/kantana.jpg"  alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/heisencat.png" data-alt-src="images/domo-cat.png" alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/domo-cat.png" data-alt-src="images/octobiwan.jpg" alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/octobiwan.jpg" data-alt-src="images/heisencat.png" alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/stormtroopocat.png" data-alt-src="images/jean-luc-picat.jpg"  alt="">
+                </div>
+                <div class="col-sm-12 col-sm-6 col-lg-3 mb-4">
+                    <img src="images/kantana.jpg" data-alt-src="images/defunktocat.png" alt="">
+                </div>
+                <div>
+                    <button id="recuperar-fotos" class="btn btn-dark btn">Restaurar</button>
+                </div>
+            </div>   
+        </div>
+        
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
+
+ 
